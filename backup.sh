@@ -12,7 +12,7 @@ user=root
 userPWD='221058_qm'
 
 # 定义备份数据库名称
-dbNames=(blog show s-shadow)
+dbNames=(tech_blog show_blog)
 
 # 定义备份目录
 dataBackupDir=/var/www/backup
@@ -53,3 +53,14 @@ done
 
 # 发送邮件通知
 #cat $eMailFile | mail -s "MySQL Backup" $eMail
+
+# 定义推送到github的目录
+git_dirs=(show_blog szyt-ic tech_blog backup)
+
+for dir in ${git_dirs[*]}
+do
+    cd /var/www/$dir
+    git add .
+    git commit -m 'back up'
+    git push
+done
