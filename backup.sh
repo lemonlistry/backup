@@ -55,7 +55,7 @@ done
 #cat $eMailFile | mail -s "MySQL Backup" $eMail
 
 # 定义推送到github的目录
-git_dirs=(show_blog szyt-ic tech_blog backup)
+git_dirs=(show_blog szyt-ic tech_blog backup panpan)
 
 for dir in ${git_dirs[*]}
 do
