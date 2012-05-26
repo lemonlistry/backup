@@ -12,7 +12,7 @@ user=root
 userPWD='221058_qm'
 
 # 定义备份数据库名称
-dbNames=(tech_blog show_blog)
+dbNames=(tech_blog show_blog fangte)
 
 # 定义备份目录
 dataBackupDir=/var/www/backup
